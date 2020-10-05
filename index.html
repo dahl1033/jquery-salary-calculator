@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jquery.js" charset="utf-8"></script>
-    <script src="script.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="scripts/jquery.js" charset="utf-8"></script>
+    <script src="scripts/script.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles/style.css">
     <title>Salary Calculator</title>
 </head>
 <body>
     <h2>Add Employee</h2>
     <input id="firstNameInput" type="text" placeholder="First Name">
     <input id="lastNameInput" type="text" placeholder="Last Name">
-    <input id="idInput" type="text" placeholder="Id">
+    <input id="idInput" type="number" placeholder="Id">
     <input id="titleInput" type="text" placeholder="Title">
-    <input id="annualSalaryInput" type="text" placeholder="Annual Salary">
+    <input id="annualSalaryInput" type="number" placeholder="Annual Salary">
     <button id="submitButton">Submit</button>
 
-    <div>
+    <main>
+        <!-- EMPLOYEE TABLE -->
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID Number</th>
+                    <th>Title</th>
+                    <th>Annual Salary</th>
+                </tr>
+            </thead>
+            <!-- jQuery will append new employees here -->
+            <tbody id="tableTarget"></tbody>
+        </table>
+        <h3 id="monthlyTotal">Monthly Total: $<span id="total"></span></h3>
+    </main>
+
+    <!-- <div>
         <div id="display grid">
             <ul id="listOfEmployees">
             </ul>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
